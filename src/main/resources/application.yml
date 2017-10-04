@@ -1,0 +1,14 @@
+endpoints:
+    shutdown:
+        enabled: true
+info:
+    app:
+        commitid: '@commitid@'
+        description: '@project.description@'
+        name: '@project.name@'
+        version: '@project.version@'
+server:
+    port: 9090
+management:
+    security:
+        enabled: false
