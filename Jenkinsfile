@@ -1,6 +1,8 @@
 import groovy.json.JsonSlurper;
  
 node{
+    
+    slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
     stage 'Build, Test and Package'
     git url: "https://github.com/capablaza/springboot-jenkins-demo.git"
     def commitid = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
