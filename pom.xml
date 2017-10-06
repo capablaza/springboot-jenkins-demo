@@ -61,4 +61,17 @@
             <url>https://repo.spring.io/libs-release</url>
         </pluginRepository>
     </pluginRepositories>
+
+   <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>3b34a6ecccd8-releases</name>
+            <url>http://54.202.81.123:8081/artifactory/springboot-ci-demo</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>3b34a6ecccd8-snapshots</name>
+            <url>http://54.202.81.123:8081/artifactory/springboot-ci-demo</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
