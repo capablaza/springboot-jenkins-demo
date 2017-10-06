@@ -17,6 +17,9 @@ node{
 
     sh 'curl -X POST http://localhost:9090/shutdown || true'
 
+    slackSend (channel: '#springboot-ci-demo', color: 'good', message: 'DEPLOY NEW ARTIFACT')
+    sh 'mvn deploy'
+
     slackSend (channel: '#springboot-ci-demo', color: 'good', message: 'RUN NEW PACKAGE GENERATED!')
     sh 'echo "mvn spring-boot:run" | at now + 1 minutes'
 }
